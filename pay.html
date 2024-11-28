@@ -1,0 +1,93 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+</html>
+<div>
+
+  <h2>Payment links</h2>
+
+  <h4>FIAT</h4>
+
+  <div id="pay-links">
+    <h5>Revolut Personal</h5>
+    <a href="https://revolut.me/matrix">revolut.me/matrix</a>
+  </div>
+
+  <div id="pay-links">
+    <h5>Revolut Pro</h5>
+    <a href="https://checkout.revolut.com/pay/1ecc06a3-3724-474c-a407-79188e01f114">Hands-on Tech
+      Consulting
+      €90/hr</a>
+  </div>
+
+  <div id="pay-links">
+    <h5>Wire transfer</h5>
+    <div>
+      Beneficiary Leonardo Faoro<br>
+      IBAN LT40 3250 0226 8912 1715<br>
+      BIC REVOLT21 (EUR)<br>
+      BIC CHASGB2L (USD)<br>
+    </div>
+  </div>
+
+  <h4>Crypto</h4>
+  <div id="pay-links">
+    <h5>Monero</h5>
+    <a href="#" _="on click 
+            log 'Clicked'
+            set link to '89XCyahmZiQgcVwjrSZTcJepPqCxZgMqwbABvzPKVpzC7gi8URDme8H6UThpCqX69y5i1aA81AKq57Wynjovy7g4K9MeY5c' 
+            then 
+            call navigator.clipboard.writeText(link) 
+            then 
+            alert(link+' copied to clipboard')">
+      xmr.leonardofaoro.com
+    </a>
+  </div>
+
+  <div id="pay-links">
+    <h5>Bitcoin (Native SegWit P2WPKH)</h5>
+    <a href="#" _="on click 
+            log 'Clicked'
+            set link to 'bc1qzaqeqwklaq86uz8h2lww87qwfpnyh9fveyh3hs' 
+            then 
+            call navigator.clipboard.writeText(link) 
+            then 
+            alert(link+' copied to clipboard')">
+      btc.leonardofaoro.com
+    </a>
+  </div>
+
+  <div id="pay-links">
+    <div id="pay-links">
+      <h5>Tron (USDT/USDC)</h5>
+      <a href="#" _="on click 
+            log 'Clicked'
+            set link to 'TUJruWe5XD1N2zEdwNGwDHvoqRy8xrYPde' 
+            then 
+            call navigator.clipboard.writeText(link) 
+            then 
+            alert(link+' copied to clipboard')">
+        TUJruWe5XD1N2zEdwNGwDHvoqRy8xrYPde
+      </a>
+    </div>
+
+    <h5>Ethereum (USDT/USDC)</h5>
+    <a href="#" _="on click 
+            log 'Clicked'
+            set link to '0x977F2f206eeA48078e9b29E9c955ef3118306aca' 
+            then 
+            call navigator.clipboard.writeText(link) 
+            then 
+            alert(link+' copied to clipboard')">
+      0x977F2f206eeA48078e9b29E9c955ef3118306aca
+    </a>
+  </div>
+
+  <div id="links-container">
+    <!-- Hyperscript will handle generating the links here -->
+  </div>
+
+</div>

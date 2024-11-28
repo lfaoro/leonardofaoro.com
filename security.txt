@@ -1,0 +1,4 @@
+Contact: mailto:security@leonardofaoro.com
+Encryption: https://leonardofaoro.com/gpg
+Canonical: https://leonardofaoro.com/security.txt
+Preferred-Languages: en
