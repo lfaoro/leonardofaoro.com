@@ -102,13 +102,17 @@ a:hover {
 }
 
 #title {
-  h4 {
-    margin-top: 0;
+  margin-top: 10px;
+  padding-top: 20px;
+
+  /* background-color: lightgray; */
+  h6 {
+    margin-top: 0px;
   }
 
-  margin: 10px;
-  padding: 20px;
-  /* background-color: lightgray; */
+  h1 {
+    margin-bottom: 0px;
+  }
 }
 
 #pay-links {

@@ -48,8 +48,10 @@
     transition *color
       to `hsl(0, 0%, 0%)`
     ">
-    <h1>Leonardo Faoro</h1>
-    <h4 _="
+    <h1>
+      Leonardo Faoro
+    </h1>
+    <h6 _="
       on pointerdown
       repeat 14 times
       set rand to Math.random() * 360
@@ -57,7 +59,9 @@
         to `hsl($rand 100% 90%)`
         over 250ms
       end
-      "></h4>
+      ">
+      0x4C 0x65 0x6F 0x6E 0x61 0x72 0x64 0x6F 0x20 0x46 0x61 0x6F 0x72 0x6F
+      </h4>
   </div>
 
   <div id="nav">
@@ -65,8 +69,8 @@
       Contact
     </button>
 
-    <button hx-get="pay.html" hx-target="#dynamic-content">
-      Pay
+    <button hx-get="banking.html" hx-target="#dynamic-content">
+      Banking
     </button>
 
     <button hx-get="content.html" hx-target="#dynamic-content" hx-trigger="click"
