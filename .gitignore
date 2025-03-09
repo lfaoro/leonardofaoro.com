@@ -2,4 +2,5 @@
 .well-known
 cv.*
 todo
+.env
 

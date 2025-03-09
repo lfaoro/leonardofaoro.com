@@ -1,3 +1,4 @@
+include .env
 .PHONY: all purge deploy
 
 all: purge
@@ -7,7 +8,7 @@ deploy:
 
 purge: deploy
 	curl -X POST "https://api.cloudflare.com/client/v4/zones/$(CF_ZONE)/purge_cache" \
-	 -H "Authorization: Bearer $(CF_API_KEY)" \
+	 -H "Authorization: Bearer $(CLOUDFLARE_API_KEY)" \
      -H "Content-Type: application/json" \
      --data '{"purge_everything":true}'
 
