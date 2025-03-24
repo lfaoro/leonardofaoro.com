@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+
+  <title>Leonardo Faoro</title>
+
+  <meta name="description" content="Personal website of Leonardo Faoro">
+  <meta name="author" content="Leonardo Faoro">
+  <meta name="copyright" content="Leonardo Faoro. All rights reserved, none waived ever.">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="canonical" href="https://leonardofaoro.com">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Leonardo Faoro">
+  <meta property="og:description" content="Leonardo's website">
+  <meta property="og:image" content="https://leonardofaoro.com/assets/leo_400x400.jpg">
+  <meta property="og:url" content="https://leonardofaoro.com">
+  <meta property="og:type" content="website">
+  <meta property="og:image:alt" content="Leonardo Faoro's portrait">
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Leonardo Faoro">
+  <meta name="twitter:description" content="Leonardo's website">
+  <meta name="twitter:image" content="https://leonardofaoro.com/assets/leo_400x400.jpg">
+
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="src/style.css">
+
+  <link rel="preload" href="src/htmx.min.js" as="script">
+  <link rel="preload" href="src/hyperscript.min.js" as="script">
+
+  <script src="src/htmx.min.js"></script>
+  <script src="src/hyperscript.min.js"></script>
+</head>
+
+<body>
+  <div id="title" _="
+  on pointerdown
+    repeat 21 times
+      set rand to Math.random() * 360
+      transition *color
+        to `hsl(${rand} 45% 45%)`
+        over 254ms
+    end
+    settle
+    transition *color
+      to `hsl(0, 0%, 0%)`
+  on click
+    trigger htmx:trigger on #dynamic-content
+  ">
+    <h1>
+      Leonardo Faoro
+    </h1>
+  </div>
+
+  <div id="nav">
+    <button hx-get="contact.html" hx-target="#dynamic-content">
+      Contact
+    </button>
+
+    <button hx-get="banking.html" hx-target="#dynamic-content">
+      Banking
+    </button>
+
+    <button hx-get="content.html" hx-target="#dynamic-content" hx-trigger="click"
+      hx-on="click: if(this.count==null) this.count=0; this.count++; if(this.count==7) {
+        sessionStorage.setItem('xVisible', 'true');
+        document.getElementById('x').style.opacity = '1';
+        event.stopPropagation();
+        return false;
+      }"
+      _="
+      on pointerdown
+      repeat until event pointerup
+      set rand to Math.random() * 360
+      transition *background-color
+        to `hsl($rand 100% 90%)`
+        over 250ms
+      end
+      ">I'm feeling lucky!
+    </button>
+  </div>
+
+  <div id="dynamic-content"></div>
+
+  <div id="footer">
+    <p>
+      All rights reserved, none waived ever. <a href="https://github.com/lfaoro/leonardofaoro.com">[Source]</a>
+    </p>
+  </div>
+
+</body>
+
+</html>

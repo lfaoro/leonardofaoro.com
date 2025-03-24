@@ -1,0 +1,131 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="src/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="banking-container">
+    <div class="banking-section">
+      <div class="button-wrapper">
+        <a href="https://checkout.revolut.com/pay/1ecc06a3-3724-474c-a407-79188e01f114" class="primary-link">
+          Hands-on tech consulting
+        </a>
+      </div>
+    </div>
+
+    <!-- Payment methods grid -->
+    <div class="payment-methods">
+      <!-- FIAT section -->
+      <div class="payment-card fiat">
+        <h4 class="card-title">FIAT</h4>
+        
+        <div class="payment-option">
+          <a href="https://revolut.me/matrix" class="payment-link">revolut.me/matrix</a>
+        </div>
+
+        <div class="payment-option">
+          <div class="transfer-details">
+            <div class="transfer-row">
+              <span class="transfer-label">Beneficiary</span>
+              <span class="transfer-value">Leonardo Faoro</span>
+            </div>
+            <div class="transfer-row">
+              <span class="transfer-label">IBAN</span>
+              <span class="transfer-value">LT40 3250 0226 8912 1715</span>
+            </div>
+            <div class="transfer-row">
+              <span class="transfer-label">BIC (EUR)</span>
+              <span class="transfer-value">REVOLT21</span>
+            </div>
+            <div class="transfer-row">
+              <span class="transfer-label">BIC (USD)</span>
+              <span class="transfer-value">CHASGB2L</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Crypto section -->
+      <div class="payment-card crypto">
+        <h4 class="card-title">Crypto</h4>
+        
+        <div class="payment-option">
+          <h5>Monero</h5>
+          <a href="#" class="copy-link" _="on click 
+                  log 'Clicked'
+                  set link to '89XCyahmZiQgcVwjrSZTcJepPqCxZgMqwbABvzPKVpzC7gi8URDme8H6UThpCqX69y5i1aA81AKq57Wynjovy7g4K9MeY5c' 
+                  then 
+                  call navigator.clipboard.writeText(link) 
+                  then 
+                  alert(link+' copied to clipboard')">
+            xmr.leonardofaoro.com
+          </a>
+          <img src="assets/qr_monero.svg" alt="Bitcoin QR Code" class="qr-code" style="max-width: 200px; width: 100%; height: auto; display: block; margin: 15px auto; background: transparent;">
+          <a href="https://ipfs.io/ipfs/QmQG1jyMpuhXefLV2cg7qDKhZ6JfZoW8sWq6UQXcqosRgU" class="copy-link">
+            leonardo.xmr
+          </a>
+        </div>
+
+        <div class="payment-option">
+          <h5>Bitcoin (Native SegWit P2WPKH)</h5>
+          <a href="#" class="copy-link" _="on click 
+                  log 'Clicked'
+                  set link to 'bc1qzaqeqwklaq86uz8h2lww87qwfpnyh9fveyh3hs' 
+                  then 
+                  call navigator.clipboard.writeText(link) 
+                  then 
+                  alert(link+' copied to clipboard')">
+            btc.leonardofaoro.com
+          </a>
+          <img src="assets/qr_bitcoin.svg" alt="Bitcoin QR Code" class="qr-code" style="max-width: 200px; width: 100%; height: auto; display: block; margin: 15px auto; background: transparent;">
+        </div>
+
+        <div class="payment-option">
+          <h5>Tron (USDT/USDC)</h5>
+          <a href="#" class="copy-link" _="on click 
+                  log 'Clicked'
+                  set link to 'TUJruWe5XD1N2zEdwNGwDHvoqRy8xrYPde' 
+                  then 
+                  call navigator.clipboard.writeText(link) 
+                  then 
+                  alert(link+' copied to clipboard')">
+            TUJruWe5XD1N2zEdwNGwDHvoqRy8xrYPde
+          </a>
+        </div>
+
+        <div class="payment-option">
+          <h5>Ethereum (USDT/USDC)</h5>
+          <a href="#" class="copy-link" _="on click 
+                  log 'Clicked'
+                  set link to '0x977F2f206eeA48078e9b29E9c955ef3118306aca' 
+                  then 
+                  call navigator.clipboard.writeText(link) 
+                  then 
+                  alert(link+' copied to clipboard')">
+            0x977F2f206eeA48078e9b29E9c955ef3118306aca
+          </a>
+          <a href="https://ud.me/faoro.eth" class="secondary-link">
+            faoro.eth
+          </a>
+        </div>
+
+        <!-- <div class="payment-option">
+          <h5>Solana</h5>
+          <a href="#" _="on click 
+                  log 'Clicked'
+                  set link to 'address' 
+                  then 
+                  call navigator.clipboard.writeText(link) 
+                  then 
+                  alert(link+' copied to clipboard')">
+            address
+          </a>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
