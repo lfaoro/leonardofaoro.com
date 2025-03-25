@@ -64,8 +64,8 @@ body {
     text-align: center;
   }
 
-  margin: 10px;
-  padding: 20px;
+  margin: 0px;
+  padding: 0px;
   width: 100%;
   max-width: 100%;
   display: flex;
@@ -75,19 +75,6 @@ body {
   overflow: visible;
   word-wrap: break-word;
 }
-
-@media (max-width: 768px) {
-  #dynamic-content {
-    padding: 10px;
-    margin: 5px;
-  }
-
-  #dynamic-content p {
-    max-width: 95%;
-    padding: 0 10px;
-  }
-}
-
 
 h1,
 h2,
@@ -198,7 +185,6 @@ button:focus {
 .contact-container {
   max-width: 600px;
   margin: 0 auto;
-  padding: 2rem;
 }
 
 .contact-section {
@@ -261,7 +247,6 @@ button:focus {
 .banking-container {
   max-width: 600px;
   margin: 0 auto;
-  padding: 2rem;
 }
 
 .banking-section {
@@ -330,7 +315,6 @@ button:focus {
 .banking-section .button-wrapper {
   display: flex;
   justify-content: center;
-  margin: 1rem 0;
 }
 
 .banking-section h5 {
@@ -344,13 +328,8 @@ button:focus {
 .content-container {
   max-width: 600px;
   margin: 0 auto;
-  padding: 2rem;
 }
 
-.content-section {
-  margin: 2rem 0;
-  padding: 1rem 0;
-}
 
 .message-wrapper {
   display: flex;
@@ -726,3 +705,108 @@ button:focus {
     margin-right: 10px;
   }
 }
+
+/* Chat bar styles - updated to fix mobile issues */
+#chat-bar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 2rem 0 0.5rem 0;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+#leona-chat-form {
+  display: flex;
+  width: 100%;
+  max-width: 410px;
+  align-items: center;
+  position: relative;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+#leona-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  font-size: 16px; /* Minimum 16px to prevent zoom on mobile */
+  background-color: transparent;
+  width: calc(100% - 50px);
+}
+
+#leona-input:focus {
+  outline: none;
+  font-size: 16px; /* Keep the same size on focus */
+}
+
+#leona-chat-form button {
+  position: static;
+  background: transparent;
+  border: none;
+  border-left: 1px solid #ddd;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  height: 100%;
+  min-width: 45px;
+  padding: 8px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#leona-chat-form button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#leona-chat-form button:hover svg {
+  stroke: #666;
+}
+
+#leona-chat-form button svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive adjustments for chat bar */
+@media (max-width: 768px) {
+  #chat-bar {
+    margin: 0.8rem 0;
+  }
+  
+  #leona-input {
+    font-size: 16px; /* Keep at 16px on mobile */
+    padding: 8px 10px;
+  }
+  
+  #leona-chat-form button {
+    min-width: 40px;
+    background-color: rgba(0, 0, 0, 0.03); /* Subtle background to make button more visible */
+  }
+}
+
+@media (max-width: 390px) {
+  #leona-chat-form {
+    max-width: 100%;
+  }
+  
+  #leona-input {
+    padding: 8px 10px;
+    font-size: 16px; /* Keep at 16px on smallest screens */
+  }
+  
+  #leona-chat-form button {
+    min-width: 40px;
+  }
+}
+
+/* Fix for mobile keyboard issues */
+@media (max-width: 768px) {
+  /* Prevent zooming on all form elements */
+  input, textarea, select, button {
+    font-size: 16px !important;
+  }
+}
+

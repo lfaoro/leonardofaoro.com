@@ -88,6 +88,28 @@
     </button>
   </div>
 
+  <div id="chat-bar">
+    <form id="leona-chat-form" hx-get="leona.html" hx-target="#dynamic-content" 
+          hx-on::after-request="this.reset(); document.getElementById('leona-input').blur();">
+      <input 
+        type="text" 
+        id="leona-input" 
+        name="message" 
+        placeholder="Chat with Leona, my personal assistant."
+        required
+        autocomplete="off"
+        enterkeyhint="send"
+      >
+      <button type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 16 12 8"></polyline>
+          <polyline points="8 12 12 8 16 12"></polyline>
+        </svg>
+      </button>
+    </form>
+  </div>
+
   <div id="dynamic-content"></div>
 
   <div id="footer">
