@@ -4,20 +4,14 @@
   "description": "Personal website of Leonardo Faoro",
   "icons": [
     {
-      "src": "assets/favicon.png",
+      "src": "assets/icon-192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
-      "src": "assets/leo_400x400.jpg",
+      "src": "assets/icon-512.jpg",
       "type": "image/jpeg",
-      "sizes": "400x400",
-      "purpose": "any"
-    },
-    {
-      "src": "assets/favicon2.png",
-      "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"
     }

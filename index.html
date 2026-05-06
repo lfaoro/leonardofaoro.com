@@ -16,7 +16,7 @@
 
   <link rel="canonical" href="https://leonardofaoro.com">
   <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="assets/favicon.png">
+  <link rel="icon" href="assets/favicon-32.png">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
   <link rel="dns-prefetch" href="https://api.github.com">
@@ -133,6 +133,7 @@
   }
   </script>
 
+  <link rel="preload" href="src/style.css" as="style">
   <link rel="stylesheet" href="src/style.css">
   <style>
     .link-muted {
@@ -661,7 +662,7 @@
     class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-lg text-sm font-medium shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900"
     role="status" aria-live="polite"></div>
 
-  <script src="src/script.js"></script>
+  <script src="src/script.js" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js').catch(function () { });
