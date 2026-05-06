@@ -1,0 +1,22 @@
+{
+  "name": "leonardofaoro-website",
+  "version": "1.1.0",
+  "description": "Leonardo Faoro's personal website",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./src/style.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./src/style.css --minify",
+    "dev": "tailwindcss -i ./src/input.css -o ./src/style.css --watch"
+  },
+  "devDependencies": {
+    "html-minifier-terser": "^7.2.0",
+    "tailwindcss": "^3.4.0",
+    "terser": "^5.31.0"
+  },
+  "keywords": [
+    "personal-website",
+    "portfolio",
+    "leonardo-faoro"
+  ],
+  "author": "Leonardo Faoro",
+  "license": "All rights reserved"
+}

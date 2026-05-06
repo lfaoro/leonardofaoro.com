@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Leonardo Faoro</title>
+  <meta name="robots" content="noindex">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://api.github.com; frame-src https://calendly.com; font-src 'self'; manifest-src 'self';">
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="src/style.css">
+  <script>
+    (function () {
+      try {
+        const m = localStorage.getItem("theme");
+        const dark = m === "dark" || (!m && matchMedia("(prefers-color-scheme:dark)").matches);
+        if (dark) document.documentElement.classList.add("dark");
+      } catch { }
+    })()
+  </script>
+</head>
+<body class="bg-neutral-50 text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100 flex items-center justify-center min-h-screen px-6">
+  <div class="text-center max-w-md">
+    <h1 class="text-6xl font-bold mb-4">404</h1>
+    <p class="text-lg text-neutral-500 dark:text-neutral-400 mb-8">
+      This page doesn't exist. Maybe it never did.
+    </p>
+    <a href="/" class="btn-primary">Back home</a>
+  </div>
+
+  <footer class="fixed bottom-0 left-0 right-0 pb-4 px-6">
+    <div class="mx-auto max-w-6xl grid grid-cols-[1fr_minmax(0,auto)_1fr] items-center gap-4 text-xs text-neutral-400 dark:text-neutral-600">
+      <div></div>
+      <span class="text-center">&copy; 2026 Leonardo Faoro. All rights reserved, none waived ever.</span>
+      <a href="https://github.com/lfaoro/leonardofaoro.com" target="_blank" rel="noopener" class="link-muted text-right">
+        Source
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

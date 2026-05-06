@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Leonardo Faoro &mdash; Security, Infrastructure &amp; Automation</title>
+  <meta name="description" content="Leonardo Faoro builds tools for security, infrastructure, and automation.">
+  <meta name="author" content="Leonardo Faoro">
+  <meta name="copyright" content="Leonardo Faoro. All rights reserved, none waived ever.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://api.github.com; frame-src https://calendly.com; font-src 'self'; manifest-src 'self';">
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+
+  <link rel="canonical" href="https://leonardofaoro.com">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+  <link rel="dns-prefetch" href="https://api.github.com">
+  <link rel="dns-prefetch" href="https://github.com">
+  <link rel="dns-prefetch" href="https://calendly.com">
+  <link rel="preconnect" href="https://github.com" crossorigin>
+  <link rel="preconnect" href="https://api.github.com" crossorigin>
+
+  <meta property="og:title" content="Leonardo Faoro &mdash; Security, Infrastructure &amp; Automation">
+  <meta property="og:description" content="Leonardo Faoro builds tools for security, infrastructure, and automation.">
+  <meta property="og:image" content="https://leonardofaoro.com/assets/leo_avatar.jpg">
+  <meta property="og:url" content="https://leonardofaoro.com">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image:alt" content="Leonardo Faoro's portrait">
+  <meta property="og:image:width" content="400">
+  <meta property="og:image:height" content="400">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Leonardo Faoro &mdash; Security, Infrastructure &amp; CLI Tools">
+  <meta name="twitter:description"
+    content="Open-source developer tools for security, infrastructure, and the command line. Built in Go.">
+  <meta name="twitter:image" content="https://leonardofaoro.com/assets/leo_avatar.jpg">
+  <meta name="twitter:image:alt" content="Leonardo Faoro's portrait">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "Leonardo Faoro",
+        "url": "https://leonardofaoro.com",
+        "image": "https://leonardofaoro.com/assets/leo_avatar.jpg",
+        "sameAs": [
+          "https://github.com/lfaoro",
+          "https://www.linkedin.com/in/lfaoro/",
+          "https://x.com/leonardofaoro"
+        ],
+        "jobTitle": "Software Engineer",
+        "knowsAbout": ["Go", "Security", "Infrastructure", "CLI Tools", "Open Source"],
+        "worksFor": { "@type": "Organization", "name": "Self-employed" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://leonardofaoro.com/" }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "flares",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "author": { "@type": "Person", "name": "Leonardo Faoro", "url": "https://leonardofaoro.com" },
+        "codeRepository": "https://github.com/lfaoro/flares",
+        "programmingLanguage": "Go",
+        "description": "CloudFlare DNS backup tool for secure DNS management and backup operations."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "ssm",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "author": { "@type": "Person", "name": "Leonardo Faoro", "url": "https://leonardofaoro.com" },
+        "codeRepository": "https://github.com/lfaoro/ssm",
+        "programmingLanguage": "Go",
+        "description": "Streamline SSH connections with a simple Terminal UI for efficient server management."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "swap",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "author": { "@type": "Person", "name": "Leonardo Faoro", "url": "https://leonardofaoro.com" },
+        "codeRepository": "https://github.com/lfaoro/swap",
+        "programmingLanguage": "Go",
+        "description": "Terminal UI for cross-chain cryptocurrency swaps with optimal rates and privacy."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "spark",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "author": { "@type": "Person", "name": "Leonardo Faoro", "url": "https://leonardofaoro.com" },
+        "codeRepository": "https://github.com/lfaoro/spark",
+        "programmingLanguage": "Go",
+        "description": "Fireblaze Vault tokenization service for secure storage of sensitive data."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "trailblaze",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "author": { "@type": "Person", "name": "Leonardo Faoro", "url": "https://leonardofaoro.com" },
+        "codeRepository": "https://github.com/lfaoro/trailblaze",
+        "programmingLanguage": "Go",
+        "description": "SSH Audit & Network Scanner for comprehensive security assessment."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "skel",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "author": { "@type": "Person", "name": "Leonardo Faoro", "url": "https://leonardofaoro.com" },
+        "codeRepository": "https://github.com/lfaoro/skel",
+        "programmingLanguage": "Nix",
+        "description": "Dotfiles configuration management using Nix for reproducible development environments."
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="src/style.css">
+  <style>
+    .link-muted {
+      position: relative;
+    }
+    .link-muted::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: currentColor;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.2s ease-out;
+    }
+    .link-muted:hover::after {
+      transform: scaleX(1);
+    }
+  </style>
+  <script>
+    (function () {
+      try {
+        const m = localStorage.getItem("theme");
+        const dark = m === "dark" || (!m && matchMedia("(prefers-color-scheme:dark)").matches);
+        if (dark) document.documentElement.classList.add("dark");
+      } catch { }
+    })()
+  </script>
+</head>
+
+<body class="bg-neutral-50 text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100">
+
+  <svg style="position:absolute;width:0;height:0;overflow:hidden;" aria-hidden="true">
+    <defs>
+      <symbol id="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <a href="#home" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 btn-primary">
+    Skip to content
+  </a>
+
+  <header id="header"
+    class="fixed top-0 z-50 w-full h-16 flex items-center header-blur transition-[height] duration-300">
+    <div class="mx-auto flex h-full w-full max-w-6xl items-center justify-between px-6">
+      <a href="#home" class="nav-name text-sm font-medium transition-all duration-300">Leonardo Faoro</a>
+
+      <nav class="hidden sm:flex items-center gap-8">
+        <a href="#projects" data-section="projects" class="text-sm link-muted">Projects</a>
+        <a href="#banking" data-section="banking" class="text-sm link-muted">Banking</a>
+        <a href="#contact" data-section="contact" class="text-sm link-muted">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle" aria-label="Toggle theme" title="Toggle dark mode (Ctrl+Shift+L)"
+          class="flex items-center justify-center w-11 h-11 md:w-8 md:h-8 rounded-lg link-muted">
+          <svg id="theme-sun" class="hidden dark:block w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="5" />
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+          <svg id="theme-moon" class="block dark:hidden w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+          </svg>
+        </button>
+
+        <button id="burger-menu" class="sm:hidden flex items-center justify-center w-11 h-11 rounded-lg link-muted"
+          aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <div class="burger-lines">
+            <span class="block w-5 h-0.5 bg-current mb-1 transition-all duration-200"></span>
+            <span class="block w-5 h-0.5 bg-current mb-1 transition-all duration-200"></span>
+            <span class="block w-5 h-0.5 bg-current transition-all duration-200"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="menu-backdrop"
+    class="fixed inset-0 z-30 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 sm:hidden"
+    aria-hidden="true"></div>
+
+  <div id="mobile-menu"
+    class="fixed inset-0 z-40 flex items-center justify-center bg-neutral-50 dark:bg-neutral-950 transform -translate-x-full transition-transform duration-300 sm:hidden"
+    role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <nav class="text-center space-y-8">
+      <a href="#home" data-section="home" class="block text-2xl font-medium mobile-menu-link link-muted">Home</a>
+      <a href="#projects" data-section="projects" class="block text-2xl font-medium mobile-menu-link link-muted">Projects</a>
+      <a href="#banking" data-section="banking" class="block text-2xl font-medium mobile-menu-link link-muted">Banking</a>
+      <a href="#contact" data-section="contact" class="block text-2xl font-medium mobile-menu-link link-muted">Contact</a>
+    </nav>
+  </div>
+
+  <main>
+    <section id="home" class="min-h-[100dvh] flex items-center justify-center">
+        <img src="assets/leo_avatar.jpg" alt="Leonardo Faoro"
+          class="w-[40vw] h-[40vw] max-w-80 max-h-80 rounded-full ring-2 ring-neutral-200 dark:ring-neutral-700" width="320" height="320" fetchpriority="high">
+    </section>
+
+    <section id="projects" class="min-h-screen flex flex-col justify-center py-20 md:py-32 border-t border-neutral-200 dark:border-neutral-800">
+      <div class="mx-auto max-w-6xl px-6">
+        <span class="block font-mono text-xs text-amber-600 dark:text-amber-400 uppercase tracking-wider mb-3">Open
+          Source</span>
+        <h2 class="text-3xl font-bold sm:text-4xl mb-3">Projects</h2>
+        <p class="text-lg text-neutral-500 dark:text-neutral-400 mb-16 max-w-2xl">
+          Tools and libraries I maintain for the developer community.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Flares -->
+          <div class="card p-6 group">
+            <div class="flex items-center justify-between mb-3">
+              <a href="https://github.com/lfaoro/flares" target="_blank" rel="noopener" class="text-lg font-semibold hover:underline">flares</a>
+              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500" aria-hidden="true"></span>Go
+              </span>
+            </div>
+            <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-3 leading-relaxed">
+              CloudFlare DNS backup tool for secure DNS management and backup operations.
+            </p>
+            <ul class="space-y-1.5 text-sm text-neutral-500 dark:text-neutral-400 mb-4">
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span>Automated DNS record backups</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span>BIND-compatible zone file exports</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span>Supports multiple Cloudflare zones</span>
+              </li>
+            </ul>
+            <div class="flex items-center justify-between text-xs border-t border-neutral-100 dark:border-neutral-800 pt-4">
+              <div class="flex gap-3 text-neutral-400 dark:text-neutral-500">
+                <span class="inline-flex items-center gap-1"><span class="gh-stars gh-loading" data-repo="lfaoro/flares" aria-label="GitHub stars"></span>&#x2605;</span>
+                <span class="inline-flex items-center gap-1"><span class="gh-forks gh-loading" data-repo="lfaoro/flares" aria-label="GitHub forks"></span>&#x2387;</span>
+              </div>
+              <a href="https://github.com/lfaoro/flares" target="_blank" rel="noopener" class="font-medium link-muted">
+                View &nearr;
+              </a>
+            </div>
+          </div>
+
+          <!-- SSM -->
+          <div class="card p-6 group">
+            <div class="flex items-center justify-between mb-3">
+              <a href="https://github.com/lfaoro/ssm" target="_blank" rel="noopener" class="text-lg font-semibold hover:underline">ssm</a>
+              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500" aria-hidden="true"></span>Go
+              </span>
+            </div>
+            <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-3 leading-relaxed">
+              Streamline SSH connections with a simple Terminal UI for efficient server management.
+            </p>
+            <ul class="space-y-1.5 text-sm text-neutral-500 dark:text-neutral-400 mb-4">
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span>Terminal UI built with Bubble Tea</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span>Fuzzy search through SSH config hosts</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span>One-key connection launch</span>
+              </li>
+            </ul>
+            <div class="flex items-center justify-between text-xs border-t border-neutral-100 dark:border-neutral-800 pt-4">
+              <div class="flex gap-3 text-neutral-400 dark:text-neutral-500">
+                <span class="inline-flex items-center gap-1"><span class="gh-stars gh-loading" data-repo="lfaoro/ssm" aria-label="GitHub stars"></span>&#x2605;</span>
+                <span class="inline-flex items-center gap-1"><span class="gh-forks gh-loading" data-repo="lfaoro/ssm" aria-label="GitHub forks"></span>&#x2387;</span>
+              </div>
+              <a href="https://github.com/lfaoro/ssm" target="_blank" rel="noopener" class="font-medium link-muted">
+                View &nearr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Swap -->
+          <div class="card p-6 group">
+            <div class="flex items-center justify-between mb-3">
+              <a href="https://github.com/lfaoro/swap" target="_blank" rel="noopener" class="text-lg font-semibold hover:underline">swap</a>
+              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500" aria-hidden="true"></span>Go
+              </span>
+            </div>
+            <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-3 leading-relaxed">
+              Terminal UI for cross-chain cryptocurrency swaps with optimal rates and privacy.
+            </p>
+            <ul class="space-y-1.5 text-sm text-neutral-500 dark:text-neutral-400 mb-4">
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span>Cross-chain swaps from the command line</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span>Aggregates rates for optimal pricing</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span>Privacy-first — no account required</span>
+              </li>
+            </ul>
+            <div class="flex items-center justify-between text-xs border-t border-neutral-100 dark:border-neutral-800 pt-4">
+              <div class="flex gap-3 text-neutral-400 dark:text-neutral-500">
+                <span class="inline-flex items-center gap-1"><span class="gh-stars gh-loading" data-repo="lfaoro/swap" aria-label="GitHub stars"></span>&#x2605;</span>
+                <span class="inline-flex items-center gap-1"><span class="gh-forks gh-loading" data-repo="lfaoro/swap" aria-label="GitHub forks"></span>&#x2387;</span>
+              </div>
+              <a href="https://github.com/lfaoro/swap" target="_blank" rel="noopener" class="font-medium link-muted">
+                View &nearr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Spark -->
+          <div class="card p-6 group">
+            <div class="flex items-center justify-between mb-3">
+              <a href="https://github.com/lfaoro/spark" target="_blank" rel="noopener" class="text-lg font-semibold hover:underline">spark</a>
+              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500" aria-hidden="true"></span>Go
+              </span>
+            </div>
+            <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-3 leading-relaxed">
+              Fireblaze Vault tokenization service for secure storage of sensitive data.
+            </p>
+            <ul class="space-y-1.5 text-sm text-neutral-500 dark:text-neutral-400 mb-4">
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span>Secure data tokenization engine</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span>Designed for vault-style architectures</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span>Easy integration via HTTP API</span>
+              </li>
+            </ul>
+            <div class="flex items-center justify-between text-xs border-t border-neutral-100 dark:border-neutral-800 pt-4">
+              <div class="flex gap-3 text-neutral-400 dark:text-neutral-500">
+                <span class="inline-flex items-center gap-1"><span class="gh-stars gh-loading" data-repo="lfaoro/spark" aria-label="GitHub stars"></span>&#x2605;</span>
+                <span class="inline-flex items-center gap-1"><span class="gh-forks gh-loading" data-repo="lfaoro/spark" aria-label="GitHub forks"></span>&#x2387;</span>
+              </div>
+              <a href="https://github.com/lfaoro/spark" target="_blank" rel="noopener" class="font-medium link-muted">
+                View &nearr;
+              </a>
+            </div>
+          </div>
+
+          <!-- TrailBlaze -->
+          <div class="card p-6 group">
+            <div class="flex items-center justify-between mb-3">
+              <a href="https://github.com/lfaoro/trailblaze" target="_blank" rel="noopener" class="text-lg font-semibold hover:underline">trailblaze</a>
+              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500" aria-hidden="true"></span>Go
+              </span>
+            </div>
+            <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-3 leading-relaxed">
+              SSH Audit &amp; Network Scanner for comprehensive security assessment.
+            </p>
+            <ul class="space-y-1.5 text-sm text-neutral-500 dark:text-neutral-400 mb-4">
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span>SSH configuration auditing</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span>Network port and service scanning</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span>Fast, concurrent scanning engine</span>
+              </li>
+            </ul>
+            <div class="flex items-center justify-between text-xs border-t border-neutral-100 dark:border-neutral-800 pt-4">
+              <div class="flex gap-3 text-neutral-400 dark:text-neutral-500">
+                <span class="inline-flex items-center gap-1"><span class="gh-stars gh-loading" data-repo="lfaoro/trailblaze" aria-label="GitHub stars"></span>&#x2605;</span>
+                <span class="inline-flex items-center gap-1"><span class="gh-forks gh-loading" data-repo="lfaoro/trailblaze" aria-label="GitHub forks"></span>&#x2387;</span>
+              </div>
+              <a href="https://github.com/lfaoro/trailblaze" target="_blank" rel="noopener" class="font-medium link-muted">
+                View &nearr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Skel -->
+          <div class="card p-6 group">
+            <div class="flex items-center justify-between mb-3">
+              <a href="https://github.com/lfaoro/skel" target="_blank" rel="noopener" class="text-lg font-semibold hover:underline">skel</a>
+              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300">
+                <span class="w-1.5 h-1.5 rounded-full bg-purple-500" aria-hidden="true"></span>Nix
+              </span>
+            </div>
+            <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-3 leading-relaxed">
+              Dotfiles configuration management using Nix for reproducible development environments.
+            </p>
+            <ul class="space-y-1.5 text-sm text-neutral-500 dark:text-neutral-400 mb-4">
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span>Declarative configuration with Nix</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span>Reproducible across machines and OSes</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span>Declarative Home Manager setup</span>
+              </li>
+            </ul>
+            <div class="flex items-center justify-between text-xs border-t border-neutral-100 dark:border-neutral-800 pt-4">
+              <div class="flex gap-3 text-neutral-400 dark:text-neutral-500">
+                <span class="inline-flex items-center gap-1"><span class="gh-stars gh-loading" data-repo="lfaoro/skel" aria-label="GitHub stars"></span>&#x2605;</span>
+                <span class="inline-flex items-center gap-1"><span class="gh-forks gh-loading" data-repo="lfaoro/skel" aria-label="GitHub forks"></span>&#x2387;</span>
+              </div>
+              <a href="https://github.com/lfaoro/skel" target="_blank" rel="noopener" class="font-medium link-muted">
+                View &nearr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-14 text-center">
+          <a href="https://github.com/lfaoro" target="_blank" rel="noopener" class="btn-primary">
+            View all on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="banking" class="min-h-screen flex flex-col justify-center py-20 md:py-32 border-t border-neutral-200 dark:border-neutral-800">
+      <div class="mx-auto max-w-5xl px-6">
+        <span
+          class="block font-mono text-xs text-amber-600 dark:text-amber-400 uppercase tracking-wider mb-3">Payments</span>
+        <h2 class="text-3xl font-bold sm:text-4xl mb-3">Banking &amp; Payments</h2>
+        <p class="text-lg text-neutral-500 dark:text-neutral-400 mb-12 max-w-2xl">
+          Ways to send and receive funds.
+        </p>
+
+        <div class="mb-10 text-center">
+          <a href="https://revolut.me/matrix" target="_blank" rel="noopener" class="btn-primary">
+            Quick Payment &mdash; revolut.me/matrix
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div class="space-y-6">
+            <div class="card p-6">
+              <h3 class="text-base font-semibold mb-5">Bank Transfer</h3>
+              <div class="space-y-4 text-sm">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs text-neutral-400 dark:text-neutral-500">Beneficiary</span>
+                  <span class="font-medium">Leonardo Faoro</span>
+                </div>
+                <div class="flex items-center justify-between gap-3">
+                  <div class="min-w-0">
+                    <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-0.5">IBAN</div>
+                    <div class="font-mono text-xs">LT40 3250 0226 8912 1715</div>
+                  </div>
+                  <button class="copy-btn flex-shrink-0 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" aria-label="Copy IBAN" data-copy="LT40 3250 0226 8912 1715">
+                    <svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#icon-copy"/></svg>
+                  </button>
+                </div>
+                <div class="flex items-center justify-between gap-3">
+                  <div class="min-w-0">
+                    <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-0.5">BIC EUR</div>
+                    <div class="font-mono text-sm">REVOLT21</div>
+                  </div>
+                  <button class="copy-btn flex-shrink-0 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" aria-label="Copy BIC EUR" data-copy="REVOLT21">
+                    <svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#icon-copy"/></svg>
+                  </button>
+                </div>
+                <div class="flex items-center justify-between gap-3">
+                  <div class="min-w-0">
+                    <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-0.5">BIC USD</div>
+                    <div class="font-mono text-sm">CHASGB2L</div>
+                  </div>
+                  <button class="copy-btn flex-shrink-0 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" aria-label="Copy BIC USD" data-copy="CHASGB2L">
+                    <svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#icon-copy"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card p-6">
+              <h3 class="text-base font-semibold mb-5">Stablecoins</h3>
+              <div class="space-y-4 text-sm">
+                <div class="flex items-start justify-between gap-3">
+                  <div class="min-w-0">
+                    <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-0.5">Tron (USDT/USDC)</div>
+                    <div class="font-mono text-xs break-all">TUJruWe5XD1N2zEdwNGwDHvoqRy8xrYPde</div>
+                  </div>
+                  <button class="copy-btn flex-shrink-0 mt-3 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" aria-label="Copy Tron address" data-copy="TUJruWe5XD1N2zEdwNGwDHvoqRy8xrYPde">
+                    <svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#icon-copy"/></svg>
+                  </button>
+                </div>
+                <div class="flex items-start justify-between gap-3">
+                  <div class="min-w-0">
+                    <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-0.5">Solana (USDT/USDC)</div>
+                    <div class="font-mono text-xs break-all">EpPMT7SMFSHzi3nuZ94p5kHgAtNvHdfbBLG8SUYzH4Dx</div>
+                  </div>
+                  <button class="copy-btn flex-shrink-0 mt-3 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" aria-label="Copy Solana address" data-copy="EpPMT7SMFSHzi3nuZ94p5kHgAtNvHdfbBLG8SUYzH4Dx">
+                    <svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#icon-copy"/></svg>
+                  </button>
+                </div>
+                <div class="flex items-start justify-between gap-3">
+                  <div class="min-w-0">
+                    <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-0.5">Ethereum (USDT/USDC)</div>
+                    <div class="font-mono text-xs break-all">0x977F2f206eeA48078e9b29E9c955ef3118306aca</div>
+                    <a href="https://ud.me/faoro.eth" class="text-xs link-muted mt-1 inline-block" target="_blank" rel="noopener">faoro.eth</a>
+                  </div>
+                  <button class="copy-btn flex-shrink-0 mt-3 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" aria-label="Copy Ethereum address" data-copy="0x977F2f206eeA48078e9b29E9c955ef3118306aca">
+                    <svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#icon-copy"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="text-base font-semibold mb-5">Cryptocurrency</h3>
+            <div class="space-y-6">
+              <div class="text-center">
+                <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-3">Bitcoin</div>
+                <div class="flex justify-center mb-3">
+                  <img src="assets/qr_bitcoin.svg" alt="Bitcoin QR" class="w-28 h-28" width="112" height="112" loading="lazy">
+                </div>
+                <div class="flex items-center justify-center gap-2 min-w-0">
+                  <div class="text-xs font-mono text-neutral-400 dark:text-neutral-500 truncate">btc.leonardofaoro.com</div>
+                  <button class="copy-btn text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" aria-label="Copy Bitcoin address" data-copy="btc.leonardofaoro.com">
+                    <svg class="w-3 h-3" aria-hidden="true"><use href="#icon-copy"/></svg>
+                  </button>
+                </div>
+              </div>
+              <div class="text-center border-t border-neutral-100 dark:border-neutral-800 pt-6">
+                <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-3">Monero</div>
+                <div class="flex justify-center mb-3">
+                  <img src="assets/qr_monero.svg" alt="Monero QR" class="w-28 h-28" width="112" height="112" loading="lazy">
+                </div>
+                <div class="flex items-center justify-center gap-2 min-w-0">
+                  <div class="text-xs font-mono text-neutral-400 dark:text-neutral-500 truncate">xmr.leonardofaoro.com</div>
+                  <button class="copy-btn text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" aria-label="Copy Monero address" data-copy="xmr.leonardofaoro.com">
+                    <svg class="w-3 h-3" aria-hidden="true"><use href="#icon-copy"/></svg>
+                  </button>
+                </div>
+                <a href="https://ipfs.io/ipfs/QmQG1jyMpuhXefLV2cg7qDKhZ6JfZoW8sWq6UQXcqosRgU" class="text-xs link-muted mt-2 inline-block" target="_blank" rel="noopener">leonardo.xmr</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="min-h-screen flex flex-col justify-center py-20 md:py-32 border-t border-neutral-200 dark:border-neutral-800">
+      <div class="mx-auto max-w-2xl px-6">
+        <span
+          class="block font-mono text-xs text-amber-600 dark:text-amber-400 uppercase tracking-wider mb-3">Connect</span>
+        <h2 class="text-3xl font-bold sm:text-4xl mb-3">Get In Touch</h2>
+        <p class="text-lg text-neutral-500 dark:text-neutral-400 mb-12 max-w-xl">
+          Let&rsquo;s build together. Reach out directly or verify my identity below.
+        </p>
+
+        <div class="card p-8 md:p-10 text-center">
+          <a href="https://calendly.com/lfaoro/15min" target="_blank" rel="noopener" class="btn-primary mb-8">
+            Book a meet
+          </a>
+
+          <div class="flex items-center justify-center gap-6 mb-10">
+            <a href="https://t.me/leonarth" target="_blank" rel="noopener" class="text-sm link-muted">Telegram</a>
+            <a href="https://www.linkedin.com/in/lfaoro/" target="_blank" rel="noopener" class="text-sm link-muted">LinkedIn</a>
+            <a href="https://x.com/leonardofaoro" target="_blank" rel="noopener" class="text-sm link-muted">X</a>
+          </div>
+
+          <div class="border-t border-neutral-100 dark:border-neutral-800 pt-8">
+            <div class="space-y-4 text-left max-w-md mx-auto">
+              <div class="flex items-center justify-between gap-3">
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-0.5">GPG</div>
+                  <a href="assets/gpg.txt" target="_blank" rel="noopener" class="font-mono text-xs link-muted block" title="8018 6C4E 0B55 7172 7FF2 EED0 E07A 9337 4443 E5CB">
+                    8018 6C4E 0B55 7172 7FF2 EED0 E07A 9337 4443 E5CB
+                  </a>
+                </div>
+                <button class="copy-btn flex-shrink-0 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+                  aria-label="Copy GPG fingerprint" data-copy="80186C4E0B5571727FF2EED0E07A93374443E5CB">
+                  <svg class="w-4 h-4" aria-hidden="true"><use href="#icon-copy"/></svg>
+                </button>
+              </div>
+              <div class="flex items-center justify-between gap-3">
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-0.5">SSH (ed25519)</div>
+                  <a href="assets/ssh.txt" target="_blank" rel="noopener" class="font-mono text-xs link-muted break-all block" title="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAznyE50VhooCkqtvfG0MRy1dT/68Nrd4P66Qtkg+/tL">
+                    ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAznyE50VhooCkqtvfG0MRy1dT/68Nrd4P66Qtkg+/tL
+                  </a>
+                </div>
+                <button class="copy-btn flex-shrink-0 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+                  aria-label="Copy SSH public key" data-copy="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAznyE50VhooCkqtvfG0MRy1dT/68Nrd4P66Qtkg+/tL">
+                  <svg class="w-4 h-4" aria-hidden="true"><use href="#icon-copy"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pb-8 px-6" style="padding-bottom: max(2rem, env(safe-area-inset-bottom))">
+    <div class="mx-auto max-w-6xl text-xs text-neutral-400 dark:text-neutral-600 text-center">
+      <span>&copy; <span id="current-year"></span> Leonardo Faoro. All rights reserved, none waived ever.</span>
+    </div>
+  </footer>
+
+  <div id="toast"
+    class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-lg text-sm font-medium shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900"
+    role="status" aria-live="polite"></div>
+
+  <script src="src/script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(function () { });
+    }
+  </script>
+</body>
+
+</html>

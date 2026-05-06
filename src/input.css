@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-neutral-50 text-neutral-900 antialiased;
+    overflow-x: hidden;
+  }
+
+  .dark body {
+    @apply bg-neutral-950 text-neutral-100;
+  }
+
+  section {
+    @apply w-full max-w-full overflow-x-hidden;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-amber-500 ring-offset-2 ring-offset-neutral-50 dark:ring-offset-neutral-950;
+  }
+
+  ::selection {
+    @apply bg-amber-200 text-neutral-900;
+  }
+
+  .dark ::selection {
+    @apply bg-amber-700 text-white;
+  }
+
+  button, a {
+    touch-action: manipulation;
+  }
+}
+
+@layer components {
+  .header-blur {
+    @apply bg-neutral-50/70 backdrop-blur-xl border-b border-neutral-200/50;
+  }
+
+  .dark .header-blur {
+    @apply bg-neutral-950/70 backdrop-blur-xl border-b border-neutral-800/50;
+  }
+
+  .card {
+    @apply border border-neutral-200 rounded-xl bg-white transition-all duration-200;
+  }
+
+  @media (hover: hover) {
+    .card:hover {
+      @apply -translate-y-0.5 shadow-lg;
+    }
+  }
+
+  .dark .card {
+    @apply border-neutral-800 bg-neutral-900;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-neutral-800;
+  }
+
+  .dark .btn-primary {
+    @apply bg-neutral-100 text-neutral-900 hover:bg-neutral-200;
+  }
+
+  .link-muted {
+    @apply text-neutral-500 transition-colors hover:text-neutral-900;
+  }
+
+  .dark .link-muted {
+    @apply text-neutral-400 hover:text-neutral-100;
+  }
+}
+
+.nav-scrolled {
+  height: 3rem;
+}
+
+.nav-scrolled .nav-name {
+  font-size: 0.875rem;
+}
+
+.burger-open span:nth-child(1) {
+  transform: rotate(45deg) translateY(6px);
+}
+
+.burger-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-6px);
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.copy-btn {
+  @apply p-2 rounded transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center;
+}
+
+.copy-btn:focus-visible {
+  @apply ring-2 ring-amber-500 ring-offset-1 ring-offset-neutral-50 dark:ring-offset-neutral-950;
+}
+
+.nav-active {
+  @apply relative text-neutral-900 dark:text-neutral-100;
+}
+
+.nav-active::after {
+  content: '';
+  @apply absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-amber-500;
+}
+
+/* GitHub stat skeleton */
+.gh-loading {
+  display: inline-block;
+  width: 1.5rem;
+  height: 0.65rem;
+  background-color: currentColor;
+  opacity: 0.12;
+  border-radius: 0.125rem;
+  animation: pulse 1.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.12;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
