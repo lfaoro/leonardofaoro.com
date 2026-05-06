@@ -2,91 +2,14 @@
   'use strict';
 
   var header = document.getElementById('header');
-  var burger = document.getElementById('burger-menu');
-  var mobile = document.getElementById('mobile-menu');
-  var backdrop = document.getElementById('menu-backdrop');
-  var links = document.querySelectorAll('.mobile-menu-link');
   var toggle = document.getElementById('theme-toggle');
   var toast = document.getElementById('toast');
 
-  // --- Mobile menu ---
-  var lastFocused = null;
-
-  function getFocusable(container) {
-    return Array.prototype.slice.call(
-      container.querySelectorAll('a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])')
-    );
-  }
-
-  function trapFocus(e) {
-    if (!mobile) return;
-    var focusable = getFocusable(mobile);
-    if (focusable.length === 0) return;
-    var first = focusable[0];
-    var last = focusable[focusable.length - 1];
-    if (e.shiftKey && e.key === 'Tab') {
-      if (document.activeElement === first) {
-        last.focus();
-        e.preventDefault();
-      }
-    } else if (e.key === 'Tab') {
-      if (document.activeElement === last) {
-        first.focus();
-        e.preventDefault();
-      }
-    }
-  }
-
-  function setMenu(isOpen) {
-    if (!burger || !mobile) return;
-    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    if (isOpen) {
-      lastFocused = document.activeElement;
-      mobile.classList.remove('-translate-x-full');
-      burger.classList.add('burger-open');
-      document.body.style.overflow = 'hidden';
-      document.addEventListener('keydown', trapFocus);
-      if (backdrop) {
-        backdrop.classList.remove('opacity-0', 'pointer-events-none');
-        backdrop.classList.add('opacity-100');
-      }
-      setTimeout(function () {
-        var focusable = getFocusable(mobile);
-        if (focusable.length) focusable[0].focus();
-      }, 50);
-    } else {
-      mobile.classList.add('-translate-x-full');
-      burger.classList.remove('burger-open');
-      document.body.style.overflow = '';
-      document.removeEventListener('keydown', trapFocus);
-      if (backdrop) {
-        backdrop.classList.remove('opacity-100');
-        backdrop.classList.add('opacity-0', 'pointer-events-none');
-      }
-      if (lastFocused) lastFocused.focus();
-    }
-  }
-
-  if (burger) {
-    burger.addEventListener('click', function () {
-      setMenu(mobile.classList.contains('-translate-x-full'));
-    });
-  }
-
-  links.forEach(function (link) {
-    link.addEventListener('click', function () { setMenu(false); });
-  });
-
-  // Close on backdrop tap
-  if (backdrop) {
-    backdrop.addEventListener('click', function () {
-      setMenu(false);
-    });
-  }
-
+  // --- Escape closes menu ---
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && burger && burger.getAttribute('aria-expanded') === 'true') {
-      setMenu(false);
+    if (e.key === 'Escape') {
+      var t = document.getElementById('menu-toggle');
+      if (t && t.checked) { t.checked = false; document.body.style.overflow = ''; }
     }
   });
 
@@ -204,7 +127,7 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.1 });
 
     fadeEls.forEach(function (el) {
       observer.observe(el);

@@ -113,7 +113,7 @@
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
 
 .fade-in.visible {
@@ -156,4 +156,26 @@
   50% {
     opacity: 0.3;
   }
+}
+
+/* Menu toggle (checkbox hack) */
+html:has(#menu-toggle:checked) #menu-backdrop {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+html:has(#menu-toggle:checked) #mobile-menu {
+  --tw-translate-x: 0;
+}
+
+html:has(#menu-toggle:checked) #burger-menu .burger-lines span:nth-child(1) {
+  transform: rotate(45deg) translateY(6px);
+}
+
+html:has(#menu-toggle:checked) #burger-menu .burger-lines span:nth-child(2) {
+  opacity: 0;
+}
+
+html:has(#menu-toggle:checked) #burger-menu .burger-lines span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-6px);
 }
