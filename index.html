@@ -10,7 +10,8 @@
   <meta name="copyright" content="Leonardo Faoro. All rights reserved, none waived ever.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://api.github.com; frame-src https://calendly.com; font-src 'self'; manifest-src 'self';">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://api.github.com; frame-src https://calendly.com; font-src 'self'; manifest-src 'self';">
   <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
 
@@ -65,7 +66,7 @@
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://leonardofaoro.com/" },
           { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://leonardofaoro.com/#projects" },
-          { "@type": "ListItem", "position": 3, "name": "Banking & Payments", "item": "https://leonardofaoro.com/#banking" },
+          { "@type": "ListItem", "position": 3, "name": "Banking", "item": "https://leonardofaoro.com/#banking" },
           { "@type": "ListItem", "position": 4, "name": "Contact", "item": "https://leonardofaoro.com/#contact" }
         ]
       },
@@ -139,6 +140,7 @@
     .link-muted {
       position: relative;
     }
+
     .link-muted::after {
       content: '';
       position: absolute;
@@ -151,6 +153,7 @@
       transform-origin: left;
       transition: transform 0.2s ease-out;
     }
+
     .link-muted:hover::after {
       transform: scaleX(1);
     }
@@ -170,8 +173,10 @@
 
   <svg style="position:absolute;width:0;height:0;overflow:hidden;" aria-hidden="true">
     <defs>
-      <symbol id="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+      <symbol id="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
       </symbol>
     </defs>
   </svg>
@@ -180,7 +185,8 @@
     Skip to content
   </a>
 
-  <input type="checkbox" id="menu-toggle" class="peer hidden" onchange="document.body.style.overflow=this.checked?'hidden':''">
+  <input type="checkbox" id="menu-toggle" class="peer hidden"
+    onchange="document.body.style.overflow=this.checked?'hidden':''">
 
   <header id="header"
     class="fixed top-0 z-50 w-full h-16 flex items-center header-blur transition-[height] duration-300">
@@ -208,8 +214,9 @@
           </svg>
         </button>
 
-        <label for="menu-toggle" id="burger-menu" class="sm:hidden flex items-center justify-center w-11 h-11 rounded-lg link-muted"
-          aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu" tabindex="0" role="button">
+        <label for="menu-toggle" id="burger-menu"
+          class="sm:hidden flex items-center justify-center w-11 h-11 rounded-lg link-muted" aria-label="Toggle menu"
+          aria-expanded="false" aria-controls="mobile-menu" tabindex="0" role="button">
           <div class="burger-lines">
             <span class="block w-5 h-0.5 bg-current mb-1 transition-all duration-200"></span>
             <span class="block w-5 h-0.5 bg-current mb-1 transition-all duration-200"></span>
@@ -228,20 +235,26 @@
     class="fixed inset-0 z-40 flex items-center justify-center bg-neutral-50 dark:bg-neutral-950 transform -translate-x-full transition-transform duration-300 sm:hidden"
     role="dialog" aria-modal="true" aria-label="Navigation menu">
     <nav class="text-center space-y-8">
-      <a href="#home" data-section="home" class="block text-2xl font-medium mobile-menu-link link-muted" onclick="document.getElementById('menu-toggle').checked=false">Home</a>
-      <a href="#projects" data-section="projects" class="block text-2xl font-medium mobile-menu-link link-muted" onclick="document.getElementById('menu-toggle').checked=false">Projects</a>
-      <a href="#banking" data-section="banking" class="block text-2xl font-medium mobile-menu-link link-muted" onclick="document.getElementById('menu-toggle').checked=false">Banking</a>
-      <a href="#contact" data-section="contact" class="block text-2xl font-medium mobile-menu-link link-muted" onclick="document.getElementById('menu-toggle').checked=false">Contact</a>
+      <a href="#home" data-section="home" class="block text-2xl font-medium mobile-menu-link link-muted"
+        onclick="document.getElementById('menu-toggle').checked=false">Home</a>
+      <a href="#projects" data-section="projects" class="block text-2xl font-medium mobile-menu-link link-muted"
+        onclick="document.getElementById('menu-toggle').checked=false">Projects</a>
+      <a href="#banking" data-section="banking" class="block text-2xl font-medium mobile-menu-link link-muted"
+        onclick="document.getElementById('menu-toggle').checked=false">Banking</a>
+      <a href="#contact" data-section="contact" class="block text-2xl font-medium mobile-menu-link link-muted"
+        onclick="document.getElementById('menu-toggle').checked=false">Contact</a>
     </nav>
   </div>
 
   <main>
     <section id="home" class="min-h-[100dvh] flex items-center justify-center">
-        <img src="assets/leo_avatar.jpg" alt="Leonardo Faoro"
-          class="w-[40vw] h-[40vw] max-w-80 max-h-80 rounded-full ring-2 ring-neutral-200 dark:ring-neutral-700" width="320" height="320" fetchpriority="high">
+      <img src="assets/leo_avatar.jpg" alt="Leonardo Faoro"
+        class="w-[40vw] h-[40vw] max-w-80 max-h-80 rounded-full ring-2 ring-neutral-200 dark:ring-neutral-700"
+        width="320" height="320" fetchpriority="high">
     </section>
 
-    <section id="projects" class="min-h-screen flex flex-col justify-center py-20 md:py-32 border-t border-neutral-200 dark:border-neutral-800">
+    <section id="projects"
+      class="min-h-screen flex flex-col justify-center py-20 md:py-32 border-t border-neutral-200 dark:border-neutral-800">
       <div class="mx-auto max-w-6xl px-6">
         <span class="block font-mono text-xs text-amber-600 dark:text-amber-400 uppercase tracking-wider mb-3">Open
           Source</span>
@@ -254,8 +267,10 @@
           <!-- Flares -->
           <div class="card p-6 group">
             <div class="flex items-center justify-between mb-3">
-              <a href="https://github.com/lfaoro/flares" target="_blank" rel="noopener" class="text-lg font-semibold hover:underline">flares</a>
-              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
+              <a href="https://github.com/lfaoro/flares" target="_blank" rel="noopener"
+                class="text-lg font-semibold hover:underline">flares</a>
+              <span
+                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500" aria-hidden="true"></span>Go
               </span>
             </div>
@@ -264,22 +279,28 @@
             </p>
             <ul class="space-y-1.5 text-sm text-neutral-500 dark:text-neutral-400 mb-4">
               <li class="flex items-start gap-2">
-                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0"
+                  aria-hidden="true"></span>
                 <span>Automated DNS record backups</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0"
+                  aria-hidden="true"></span>
                 <span>BIND-compatible zone file exports</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0"
+                  aria-hidden="true"></span>
                 <span>Supports multiple Cloudflare zones</span>
               </li>
             </ul>
-            <div class="flex items-center justify-between text-xs border-t border-neutral-100 dark:border-neutral-800 pt-4">
+            <div
+              class="flex items-center justify-between text-xs border-t border-neutral-100 dark:border-neutral-800 pt-4">
               <div class="flex gap-3 text-neutral-400 dark:text-neutral-500">
-                <span class="inline-flex items-center gap-1"><span class="gh-stars gh-loading" data-repo="lfaoro/flares" aria-label="GitHub stars"></span>&#x2605;</span>
-                <span class="inline-flex items-center gap-1"><span class="gh-forks gh-loading" data-repo="lfaoro/flares" aria-label="GitHub forks"></span>&#x2387;</span>
+                <span class="inline-flex items-center gap-1"><span class="gh-stars gh-loading" data-repo="lfaoro/flares"
+                    aria-label="GitHub stars"></span>&#x2605;</span>
+                <span class="inline-flex items-center gap-1"><span class="gh-forks gh-loading" data-repo="lfaoro/flares"
+                    aria-label="GitHub forks"></span>&#x2387;</span>
               </div>
               <a href="https://github.com/lfaoro/flares" target="_blank" rel="noopener" class="font-medium link-muted">
                 View &nearr;
@@ -290,8 +311,10 @@
           <!-- SSM -->
           <div class="card p-6 group">
             <div class="flex items-center justify-between mb-3">
-              <a href="https://github.com/lfaoro/ssm" target="_blank" rel="noopener" class="text-lg font-semibold hover:underline">ssm</a>
-              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
+              <a href="https://github.com/lfaoro/ssm" target="_blank" rel="noopener"
+                class="text-lg font-semibold hover:underline">ssm</a>
+              <span
+                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500" aria-hidden="true"></span>Go
               </span>
             </div>
@@ -300,22 +323,28 @@
             </p>
             <ul class="space-y-1.5 text-sm text-neutral-500 dark:text-neutral-400 mb-4">
               <li class="flex items-start gap-2">
-                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0"
+                  aria-hidden="true"></span>
                 <span>Terminal UI built with Bubble Tea</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0"
+                  aria-hidden="true"></span>
                 <span>Fuzzy search through SSH config hosts</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0"
+                  aria-hidden="true"></span>
                 <span>One-key connection launch</span>
               </li>
             </ul>
-            <div class="flex items-center justify-between text-xs border-t border-neutral-100 dark:border-neutral-800 pt-4">
+            <div
+              class="flex items-center justify-between text-xs border-t border-neutral-100 dark:border-neutral-800 pt-4">
               <div class="flex gap-3 text-neutral-400 dark:text-neutral-500">
-                <span class="inline-flex items-center gap-1"><span class="gh-stars gh-loading" data-repo="lfaoro/ssm" aria-label="GitHub stars"></span>&#x2605;</span>
-                <span class="inline-flex items-center gap-1"><span class="gh-forks gh-loading" data-repo="lfaoro/ssm" aria-label="GitHub forks"></span>&#x2387;</span>
+                <span class="inline-flex items-center gap-1"><span class="gh-stars gh-loading" data-repo="lfaoro/ssm"
+                    aria-label="GitHub stars"></span>&#x2605;</span>
+                <span class="inline-flex items-center gap-1"><span class="gh-forks gh-loading" data-repo="lfaoro/ssm"
+                    aria-label="GitHub forks"></span>&#x2387;</span>
               </div>
               <a href="https://github.com/lfaoro/ssm" target="_blank" rel="noopener" class="font-medium link-muted">
                 View &nearr;
@@ -326,8 +355,10 @@
           <!-- Swap -->
           <div class="card p-6 group">
             <div class="flex items-center justify-between mb-3">
-              <a href="https://github.com/lfaoro/swap" target="_blank" rel="noopener" class="text-lg font-semibold hover:underline">swap</a>
-              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
+              <a href="https://github.com/lfaoro/swap" target="_blank" rel="noopener"
+                class="text-lg font-semibold hover:underline">swap</a>
+              <span
+                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500" aria-hidden="true"></span>Go
               </span>
             </div>
@@ -336,22 +367,28 @@
             </p>
             <ul class="space-y-1.5 text-sm text-neutral-500 dark:text-neutral-400 mb-4">
               <li class="flex items-start gap-2">
-                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0"
+                  aria-hidden="true"></span>
                 <span>Cross-chain swaps from the command line</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0"
+                  aria-hidden="true"></span>
                 <span>Aggregates rates for optimal pricing</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0"
+                  aria-hidden="true"></span>
                 <span>Privacy-first — no account required</span>
               </li>
             </ul>
-            <div class="flex items-center justify-between text-xs border-t border-neutral-100 dark:border-neutral-800 pt-4">
+            <div
+              class="flex items-center justify-between text-xs border-t border-neutral-100 dark:border-neutral-800 pt-4">
               <div class="flex gap-3 text-neutral-400 dark:text-neutral-500">
-                <span class="inline-flex items-center gap-1"><span class="gh-stars gh-loading" data-repo="lfaoro/swap" aria-label="GitHub stars"></span>&#x2605;</span>
-                <span class="inline-flex items-center gap-1"><span class="gh-forks gh-loading" data-repo="lfaoro/swap" aria-label="GitHub forks"></span>&#x2387;</span>
+                <span class="inline-flex items-center gap-1"><span class="gh-stars gh-loading" data-repo="lfaoro/swap"
+                    aria-label="GitHub stars"></span>&#x2605;</span>
+                <span class="inline-flex items-center gap-1"><span class="gh-forks gh-loading" data-repo="lfaoro/swap"
+                    aria-label="GitHub forks"></span>&#x2387;</span>
               </div>
               <a href="https://github.com/lfaoro/swap" target="_blank" rel="noopener" class="font-medium link-muted">
                 View &nearr;
@@ -362,8 +399,10 @@
           <!-- Spark -->
           <div class="card p-6 group">
             <div class="flex items-center justify-between mb-3">
-              <a href="https://github.com/lfaoro/spark" target="_blank" rel="noopener" class="text-lg font-semibold hover:underline">spark</a>
-              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
+              <a href="https://github.com/lfaoro/spark" target="_blank" rel="noopener"
+                class="text-lg font-semibold hover:underline">spark</a>
+              <span
+                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500" aria-hidden="true"></span>Go
               </span>
             </div>
@@ -372,22 +411,28 @@
             </p>
             <ul class="space-y-1.5 text-sm text-neutral-500 dark:text-neutral-400 mb-4">
               <li class="flex items-start gap-2">
-                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0"
+                  aria-hidden="true"></span>
                 <span>Secure data tokenization engine</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0"
+                  aria-hidden="true"></span>
                 <span>Designed for vault-style architectures</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0"
+                  aria-hidden="true"></span>
                 <span>Easy integration via HTTP API</span>
               </li>
             </ul>
-            <div class="flex items-center justify-between text-xs border-t border-neutral-100 dark:border-neutral-800 pt-4">
+            <div
+              class="flex items-center justify-between text-xs border-t border-neutral-100 dark:border-neutral-800 pt-4">
               <div class="flex gap-3 text-neutral-400 dark:text-neutral-500">
-                <span class="inline-flex items-center gap-1"><span class="gh-stars gh-loading" data-repo="lfaoro/spark" aria-label="GitHub stars"></span>&#x2605;</span>
-                <span class="inline-flex items-center gap-1"><span class="gh-forks gh-loading" data-repo="lfaoro/spark" aria-label="GitHub forks"></span>&#x2387;</span>
+                <span class="inline-flex items-center gap-1"><span class="gh-stars gh-loading" data-repo="lfaoro/spark"
+                    aria-label="GitHub stars"></span>&#x2605;</span>
+                <span class="inline-flex items-center gap-1"><span class="gh-forks gh-loading" data-repo="lfaoro/spark"
+                    aria-label="GitHub forks"></span>&#x2387;</span>
               </div>
               <a href="https://github.com/lfaoro/spark" target="_blank" rel="noopener" class="font-medium link-muted">
                 View &nearr;
@@ -398,8 +443,10 @@
           <!-- TrailBlaze -->
           <div class="card p-6 group">
             <div class="flex items-center justify-between mb-3">
-              <a href="https://github.com/lfaoro/trailblaze" target="_blank" rel="noopener" class="text-lg font-semibold hover:underline">trailblaze</a>
-              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
+              <a href="https://github.com/lfaoro/trailblaze" target="_blank" rel="noopener"
+                class="text-lg font-semibold hover:underline">trailblaze</a>
+              <span
+                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500" aria-hidden="true"></span>Go
               </span>
             </div>
@@ -408,24 +455,31 @@
             </p>
             <ul class="space-y-1.5 text-sm text-neutral-500 dark:text-neutral-400 mb-4">
               <li class="flex items-start gap-2">
-                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0"
+                  aria-hidden="true"></span>
                 <span>SSH configuration auditing</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0"
+                  aria-hidden="true"></span>
                 <span>Network port and service scanning</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0"
+                  aria-hidden="true"></span>
                 <span>Fast, concurrent scanning engine</span>
               </li>
             </ul>
-            <div class="flex items-center justify-between text-xs border-t border-neutral-100 dark:border-neutral-800 pt-4">
+            <div
+              class="flex items-center justify-between text-xs border-t border-neutral-100 dark:border-neutral-800 pt-4">
               <div class="flex gap-3 text-neutral-400 dark:text-neutral-500">
-                <span class="inline-flex items-center gap-1"><span class="gh-stars gh-loading" data-repo="lfaoro/trailblaze" aria-label="GitHub stars"></span>&#x2605;</span>
-                <span class="inline-flex items-center gap-1"><span class="gh-forks gh-loading" data-repo="lfaoro/trailblaze" aria-label="GitHub forks"></span>&#x2387;</span>
+                <span class="inline-flex items-center gap-1"><span class="gh-stars gh-loading"
+                    data-repo="lfaoro/trailblaze" aria-label="GitHub stars"></span>&#x2605;</span>
+                <span class="inline-flex items-center gap-1"><span class="gh-forks gh-loading"
+                    data-repo="lfaoro/trailblaze" aria-label="GitHub forks"></span>&#x2387;</span>
               </div>
-              <a href="https://github.com/lfaoro/trailblaze" target="_blank" rel="noopener" class="font-medium link-muted">
+              <a href="https://github.com/lfaoro/trailblaze" target="_blank" rel="noopener"
+                class="font-medium link-muted">
                 View &nearr;
               </a>
             </div>
@@ -434,8 +488,10 @@
           <!-- Skel -->
           <div class="card p-6 group">
             <div class="flex items-center justify-between mb-3">
-              <a href="https://github.com/lfaoro/skel" target="_blank" rel="noopener" class="text-lg font-semibold hover:underline">skel</a>
-              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300">
+              <a href="https://github.com/lfaoro/skel" target="_blank" rel="noopener"
+                class="text-lg font-semibold hover:underline">skel</a>
+              <span
+                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300">
                 <span class="w-1.5 h-1.5 rounded-full bg-purple-500" aria-hidden="true"></span>Nix
               </span>
             </div>
@@ -444,22 +500,28 @@
             </p>
             <ul class="space-y-1.5 text-sm text-neutral-500 dark:text-neutral-400 mb-4">
               <li class="flex items-start gap-2">
-                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0"
+                  aria-hidden="true"></span>
                 <span>Declarative configuration with Nix</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0"
+                  aria-hidden="true"></span>
                 <span>Reproducible across machines and OSes</span>
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" aria-hidden="true"></span>
+                <span class="mt-1.5 w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-600 flex-shrink-0"
+                  aria-hidden="true"></span>
                 <span>Declarative Home Manager setup</span>
               </li>
             </ul>
-            <div class="flex items-center justify-between text-xs border-t border-neutral-100 dark:border-neutral-800 pt-4">
+            <div
+              class="flex items-center justify-between text-xs border-t border-neutral-100 dark:border-neutral-800 pt-4">
               <div class="flex gap-3 text-neutral-400 dark:text-neutral-500">
-                <span class="inline-flex items-center gap-1"><span class="gh-stars gh-loading" data-repo="lfaoro/skel" aria-label="GitHub stars"></span>&#x2605;</span>
-                <span class="inline-flex items-center gap-1"><span class="gh-forks gh-loading" data-repo="lfaoro/skel" aria-label="GitHub forks"></span>&#x2387;</span>
+                <span class="inline-flex items-center gap-1"><span class="gh-stars gh-loading" data-repo="lfaoro/skel"
+                    aria-label="GitHub stars"></span>&#x2605;</span>
+                <span class="inline-flex items-center gap-1"><span class="gh-forks gh-loading" data-repo="lfaoro/skel"
+                    aria-label="GitHub forks"></span>&#x2387;</span>
               </div>
               <a href="https://github.com/lfaoro/skel" target="_blank" rel="noopener" class="font-medium link-muted">
                 View &nearr;
@@ -476,18 +538,19 @@
       </div>
     </section>
 
-    <section id="banking" class="min-h-screen flex flex-col justify-center py-20 md:py-32 border-t border-neutral-200 dark:border-neutral-800">
+    <section id="banking"
+      class="min-h-screen flex flex-col justify-center py-20 md:py-32 border-t border-neutral-200 dark:border-neutral-800">
       <div class="mx-auto max-w-5xl px-6">
         <span
           class="block font-mono text-xs text-amber-600 dark:text-amber-400 uppercase tracking-wider mb-3">Payments</span>
-        <h2 class="text-3xl font-bold sm:text-4xl mb-3">Banking &amp; Payments</h2>
+        <h2 class="text-3xl font-bold sm:text-4xl mb-3">Banking</h2>
         <p class="text-lg text-neutral-500 dark:text-neutral-400 mb-12 max-w-2xl">
-          Ways to send and receive funds.
+          Ways to send funds.
         </p>
 
         <div class="mb-10 text-center">
           <a href="https://revolut.me/matrix" target="_blank" rel="noopener" class="btn-primary">
-            Quick Payment &mdash; revolut.me/matrix
+            Quick contribution &mdash; revolut.me/matrix
           </a>
         </div>
 
@@ -505,8 +568,12 @@
                     <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-0.5">IBAN</div>
                     <div class="font-mono text-xs">LT40 3250 0226 8912 1715</div>
                   </div>
-                  <button class="copy-btn flex-shrink-0 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" aria-label="Copy IBAN" data-copy="LT40 3250 0226 8912 1715">
-                    <svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#icon-copy"/></svg>
+                  <button
+                    class="copy-btn flex-shrink-0 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+                    aria-label="Copy IBAN" data-copy="LT40 3250 0226 8912 1715">
+                    <svg class="w-3.5 h-3.5" aria-hidden="true">
+                      <use href="#icon-copy" />
+                    </svg>
                   </button>
                 </div>
                 <div class="flex items-center justify-between gap-3">
@@ -514,8 +581,12 @@
                     <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-0.5">BIC EUR</div>
                     <div class="font-mono text-sm">REVOLT21</div>
                   </div>
-                  <button class="copy-btn flex-shrink-0 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" aria-label="Copy BIC EUR" data-copy="REVOLT21">
-                    <svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#icon-copy"/></svg>
+                  <button
+                    class="copy-btn flex-shrink-0 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+                    aria-label="Copy BIC EUR" data-copy="REVOLT21">
+                    <svg class="w-3.5 h-3.5" aria-hidden="true">
+                      <use href="#icon-copy" />
+                    </svg>
                   </button>
                 </div>
                 <div class="flex items-center justify-between gap-3">
@@ -523,8 +594,12 @@
                     <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-0.5">BIC USD</div>
                     <div class="font-mono text-sm">CHASGB2L</div>
                   </div>
-                  <button class="copy-btn flex-shrink-0 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" aria-label="Copy BIC USD" data-copy="CHASGB2L">
-                    <svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#icon-copy"/></svg>
+                  <button
+                    class="copy-btn flex-shrink-0 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+                    aria-label="Copy BIC USD" data-copy="CHASGB2L">
+                    <svg class="w-3.5 h-3.5" aria-hidden="true">
+                      <use href="#icon-copy" />
+                    </svg>
                   </button>
                 </div>
               </div>
@@ -538,8 +613,12 @@
                     <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-0.5">Tron (USDT/USDC)</div>
                     <div class="font-mono text-xs break-all">TUJruWe5XD1N2zEdwNGwDHvoqRy8xrYPde</div>
                   </div>
-                  <button class="copy-btn flex-shrink-0 mt-3 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" aria-label="Copy Tron address" data-copy="TUJruWe5XD1N2zEdwNGwDHvoqRy8xrYPde">
-                    <svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#icon-copy"/></svg>
+                  <button
+                    class="copy-btn flex-shrink-0 mt-3 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+                    aria-label="Copy Tron address" data-copy="TUJruWe5XD1N2zEdwNGwDHvoqRy8xrYPde">
+                    <svg class="w-3.5 h-3.5" aria-hidden="true">
+                      <use href="#icon-copy" />
+                    </svg>
                   </button>
                 </div>
                 <div class="flex items-start justify-between gap-3">
@@ -547,18 +626,27 @@
                     <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-0.5">Solana (USDT/USDC)</div>
                     <div class="font-mono text-xs break-all">EpPMT7SMFSHzi3nuZ94p5kHgAtNvHdfbBLG8SUYzH4Dx</div>
                   </div>
-                  <button class="copy-btn flex-shrink-0 mt-3 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" aria-label="Copy Solana address" data-copy="EpPMT7SMFSHzi3nuZ94p5kHgAtNvHdfbBLG8SUYzH4Dx">
-                    <svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#icon-copy"/></svg>
+                  <button
+                    class="copy-btn flex-shrink-0 mt-3 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+                    aria-label="Copy Solana address" data-copy="EpPMT7SMFSHzi3nuZ94p5kHgAtNvHdfbBLG8SUYzH4Dx">
+                    <svg class="w-3.5 h-3.5" aria-hidden="true">
+                      <use href="#icon-copy" />
+                    </svg>
                   </button>
                 </div>
                 <div class="flex items-start justify-between gap-3">
                   <div class="min-w-0">
                     <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-0.5">Ethereum (USDT/USDC)</div>
                     <div class="font-mono text-xs break-all">0x977F2f206eeA48078e9b29E9c955ef3118306aca</div>
-                    <a href="https://ud.me/faoro.eth" class="text-xs link-muted mt-1 inline-block" target="_blank" rel="noopener">faoro.eth</a>
+                    <a href="https://ud.me/faoro.eth" class="text-xs link-muted mt-1 inline-block" target="_blank"
+                      rel="noopener">faoro.eth</a>
                   </div>
-                  <button class="copy-btn flex-shrink-0 mt-3 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" aria-label="Copy Ethereum address" data-copy="0x977F2f206eeA48078e9b29E9c955ef3118306aca">
-                    <svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#icon-copy"/></svg>
+                  <button
+                    class="copy-btn flex-shrink-0 mt-3 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+                    aria-label="Copy Ethereum address" data-copy="0x977F2f206eeA48078e9b29E9c955ef3118306aca">
+                    <svg class="w-3.5 h-3.5" aria-hidden="true">
+                      <use href="#icon-copy" />
+                    </svg>
                   </button>
                 </div>
               </div>
@@ -571,27 +659,41 @@
               <div class="text-center">
                 <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-3">Bitcoin</div>
                 <div class="flex justify-center mb-3">
-                  <img src="assets/qr_bitcoin.svg" alt="Bitcoin QR" class="w-28 h-28" width="112" height="112" loading="lazy">
+                  <img src="assets/qr_bitcoin.svg" alt="Bitcoin QR" class="w-28 h-28" width="112" height="112"
+                    loading="lazy">
                 </div>
                 <div class="flex items-center justify-center gap-2 min-w-0">
-                  <div class="text-xs font-mono text-neutral-400 dark:text-neutral-500 truncate">btc.leonardofaoro.com</div>
-                  <button class="copy-btn text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" aria-label="Copy Bitcoin address" data-copy="btc.leonardofaoro.com">
-                    <svg class="w-3 h-3" aria-hidden="true"><use href="#icon-copy"/></svg>
+                  <div class="text-xs font-mono text-neutral-400 dark:text-neutral-500 truncate">btc.leonardofaoro.com
+                  </div>
+                  <button
+                    class="copy-btn text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+                    aria-label="Copy Bitcoin address" data-copy="bc1qzaqeqwklaq86uz8h2lww87qwfpnyh9fveyh3hs">
+                    <svg class="w-3 h-3" aria-hidden="true">
+                      <use href="#icon-copy" />
+                    </svg>
                   </button>
                 </div>
               </div>
               <div class="text-center border-t border-neutral-100 dark:border-neutral-800 pt-6">
                 <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-3">Monero</div>
                 <div class="flex justify-center mb-3">
-                  <img src="assets/qr_monero.svg" alt="Monero QR" class="w-28 h-28" width="112" height="112" loading="lazy">
+                  <img src="assets/qr_monero.svg" alt="Monero QR" class="w-28 h-28" width="112" height="112"
+                    loading="lazy">
                 </div>
                 <div class="flex items-center justify-center gap-2 min-w-0">
-                  <div class="text-xs font-mono text-neutral-400 dark:text-neutral-500 truncate">xmr.leonardofaoro.com</div>
-                  <button class="copy-btn text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors" aria-label="Copy Monero address" data-copy="xmr.leonardofaoro.com">
-                    <svg class="w-3 h-3" aria-hidden="true"><use href="#icon-copy"/></svg>
+                  <div class="text-xs font-mono text-neutral-400 dark:text-neutral-500 truncate">xmr.leonardofaoro.com
+                  </div>
+                  <button
+                    class="copy-btn text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+                    aria-label="Copy Monero address"
+                    data-copy="89XCyahmZiQgcVwjrSZTcJepPqCxZgMqwbABvzPKVpzC7gi8URDme8H6UThpCqX69y5i1aA81AKq57Wynjovy7g4K9MeY5c">
+                    <svg class="w-3 h-3" aria-hidden="true">
+                      <use href="#icon-copy" />
+                    </svg>
                   </button>
                 </div>
-                <a href="https://ipfs.io/ipfs/QmQG1jyMpuhXefLV2cg7qDKhZ6JfZoW8sWq6UQXcqosRgU" class="text-xs link-muted mt-2 inline-block" target="_blank" rel="noopener">leonardo.xmr</a>
+                <a href="https://ipfs.io/ipfs/QmQG1jyMpuhXefLV2cg7qDKhZ6JfZoW8sWq6UQXcqosRgU"
+                  class="text-xs link-muted mt-2 inline-block" target="_blank" rel="noopener">leonardo.xmr</a>
               </div>
             </div>
           </div>
@@ -599,7 +701,8 @@
       </div>
     </section>
 
-    <section id="contact" class="min-h-screen flex flex-col justify-center py-20 md:py-32 border-t border-neutral-200 dark:border-neutral-800">
+    <section id="contact"
+      class="min-h-screen flex flex-col justify-center py-20 md:py-32 border-t border-neutral-200 dark:border-neutral-800">
       <div class="mx-auto max-w-2xl px-6">
         <span
           class="block font-mono text-xs text-amber-600 dark:text-amber-400 uppercase tracking-wider mb-3">Connect</span>
@@ -615,7 +718,8 @@
 
           <div class="flex items-center justify-center gap-6 mb-10">
             <a href="https://t.me/leonarth" target="_blank" rel="noopener" class="text-sm link-muted">Telegram</a>
-            <a href="https://www.linkedin.com/in/lfaoro/" target="_blank" rel="noopener" class="text-sm link-muted">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/lfaoro/" target="_blank" rel="noopener"
+              class="text-sm link-muted">LinkedIn</a>
             <a href="https://x.com/leonardofaoro" target="_blank" rel="noopener" class="text-sm link-muted">X</a>
           </div>
 
@@ -624,25 +728,35 @@
               <div class="flex items-center justify-between gap-3">
                 <div class="flex-1 min-w-0">
                   <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-0.5">GPG</div>
-                  <a href="assets/gpg.txt" target="_blank" rel="noopener" class="font-mono text-xs link-muted block" title="8018 6C4E 0B55 7172 7FF2 EED0 E07A 9337 4443 E5CB">
+                  <a href="assets/gpg.txt" target="_blank" rel="noopener" class="font-mono text-xs link-muted block"
+                    title="8018 6C4E 0B55 7172 7FF2 EED0 E07A 9337 4443 E5CB">
                     8018 6C4E 0B55 7172 7FF2 EED0 E07A 9337 4443 E5CB
                   </a>
                 </div>
-                <button class="copy-btn flex-shrink-0 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+                <button
+                  class="copy-btn flex-shrink-0 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
                   aria-label="Copy GPG fingerprint" data-copy="80186C4E0B5571727FF2EED0E07A93374443E5CB">
-                  <svg class="w-4 h-4" aria-hidden="true"><use href="#icon-copy"/></svg>
+                  <svg class="w-4 h-4" aria-hidden="true">
+                    <use href="#icon-copy" />
+                  </svg>
                 </button>
               </div>
               <div class="flex items-center justify-between gap-3">
                 <div class="flex-1 min-w-0">
                   <div class="text-xs text-neutral-400 dark:text-neutral-500 mb-0.5">SSH (ed25519)</div>
-                  <a href="assets/ssh.txt" target="_blank" rel="noopener" class="font-mono text-xs link-muted break-all block" title="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOzSw0SHGs0tzwwEcmuBZLIe0HEvZWyyPFSqMY96Fleo">
+                  <a href="assets/ssh.txt" target="_blank" rel="noopener"
+                    class="font-mono text-xs link-muted break-all block"
+                    title="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOzSw0SHGs0tzwwEcmuBZLIe0HEvZWyyPFSqMY96Fleo ssh@leonardofaoro.com">
                     ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOzSw0SHGs0tzwwEcmuBZLIe0HEvZWyyPFSqMY96Fleo
                   </a>
                 </div>
-                <button class="copy-btn flex-shrink-0 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
-                  aria-label="Copy SSH public key" data-copy="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOzSw0SHGs0tzwwEcmuBZLIe0HEvZWyyPFSqMY96Fleo">
-                  <svg class="w-4 h-4" aria-hidden="true"><use href="#icon-copy"/></svg>
+                <button
+                  class="copy-btn flex-shrink-0 text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+                  aria-label="Copy SSH public key"
+                  data-copy="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOzSw0SHGs0tzwwEcmuBZLIe0HEvZWyyPFSqMY96Fleo">
+                  <svg class="w-4 h-4" aria-hidden="true">
+                    <use href="#icon-copy" />
+                  </svg>
                 </button>
               </div>
             </div>
