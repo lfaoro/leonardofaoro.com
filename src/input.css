@@ -79,14 +79,6 @@
   }
 }
 
-.nav-scrolled {
-  height: 3rem;
-}
-
-.nav-scrolled .nav-name {
-  font-size: 0.875rem;
-}
-
 .burger-open span:nth-child(1) {
   transform: rotate(45deg) translateY(6px);
 }

@@ -1,7 +1,6 @@
 (function () {
   'use strict';
 
-  var header = document.getElementById('header');
   var toggle = document.getElementById('theme-toggle');
   var toast = document.getElementById('toast');
 
@@ -12,16 +11,6 @@
       if (t && t.checked) { t.checked = false; document.body.style.overflow = ''; }
     }
   });
-
-  // --- Header scroll ---
-  window.addEventListener('scroll', function () {
-    if (!header) return;
-    if (window.scrollY > 50) {
-      header.classList.add('nav-scrolled');
-    } else {
-      header.classList.remove('nav-scrolled');
-    }
-  }, { passive: true });
 
   // --- Active nav indicator ---
   var navLinks = document.querySelectorAll('nav a[data-section]');
