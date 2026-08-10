@@ -2,7 +2,7 @@
 
 > Engineer. Hacker. Thinkerer. Building open-source tools for security, infrastructure, and the command line.
 
-Leonardo Faoro is a software engineer based in the United States, working on open-source developer tools in Go. His work spans SSH tooling, terminal user interfaces, DNS management, security auditing, cryptocurrency payments, and agent harness engineering. Reachable by email at me@leonardofaoro.com.
+Leonardo Faoro is a software engineer working on open-source developer tools in Go. His work spans SSH tooling, terminal user interfaces, DNS management, security auditing, cryptocurrency payments, and agent harness engineering. Reachable by email at me@leonardofaoro.com.
 
 ## Projects
 
