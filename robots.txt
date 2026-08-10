@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://leonardofaoro.com/sitemap.xml
+# LLM-readable summary: https://leonardofaoro.com/llms.txt

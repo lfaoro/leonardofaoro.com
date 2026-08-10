@@ -1,0 +1,38 @@
+# Leonardo Faoro
+
+> Engineer. Hacker. Thinkerer. Building open-source tools for security, infrastructure, and the command line.
+
+Leonardo Faoro is a software engineer based in the United States, working on open-source developer tools in Go. His work spans SSH tooling, terminal user interfaces, DNS management, security auditing, cryptocurrency payments, and agent harness engineering. Reachable by email at me@leonardofaoro.com.
+
+## Projects
+
+- [flares](https://github.com/lfaoro/flares): Cloudflare DNS backup tool for secure DNS management and backup operations.
+- [ssm](https://github.com/lfaoro/ssm): Fast, keyboard-driven TUI that makes your existing ~/.ssh/config delightful to use at fleet scale.
+- [swap](https://github.com/lfaoro/swap): Terminal UI for cross-chain cryptocurrency swaps with optimal rates and privacy.
+- [spark](https://github.com/lfaoro/spark): Fireblaze Vault tokenization service for secure storage of sensitive data.
+- [trailblaze](https://github.com/lfaoro/trailblaze): SSH auditing and network scanning for comprehensive security assessment.
+- [skel](https://github.com/lfaoro/skel): Dotfiles configuration management using Nix for reproducible development environments.
+- [All repositories](https://github.com/lfaoro): GitHub profile.
+
+## Banking & Payments
+
+- Revolut: https://revolut.me/matrix
+- Bank transfer (IBAN LT40 3250 0226 8912 1715, BIC EUR REVOLT21, BIC USD CHASGB2L)
+- Stablecoins: Tron, Solana, and Ethereum (USDT/USDC)
+- Cryptocurrency: Bitcoin (btc.leonardofaoro.com) and Monero (xmr.leonardofaoro.com)
+- Details: https://leonardofaoro.com/#banking
+
+## Contact
+
+- Email: me@leonardofaoro.com
+- Calendly: https://calendly.com/lfaoro/15min
+- Telegram: https://t.me/leonarth
+- LinkedIn: https://www.linkedin.com/in/lfaoro/
+- X: https://x.com/leonardofaoro
+- GPG fingerprint: 8018 6C4E 0B55 7172 7FF2 EED0 E07A 9337 4443 E5CB
+- SSH: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOzSw0SHGs0tzwwEcmuBZLIe0HEvZWyyPFSqMY96Fleo ssh@leonardofaoro.com
+
+## Licensing
+
+- Code: MIT (https://github.com/lfaoro/leonardofaoro.com/blob/main/LICENSE)
+- Site content: CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/)
