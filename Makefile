@@ -23,6 +23,8 @@ deploy: build
 	@cp manifest.json dist/
 	@cp security.txt dist/
 	@cp robots.txt dist/
+	@cp LICENSE dist/LICENSE
+	@cp LICENSE-CONTENT.md dist/LICENSE-CONTENT.md
 	@sed -i "s|<lastmod>.*</lastmod>|<lastmod>$$(date +%Y-%m-%d)</lastmod>|" sitemap.xml
 	@cp sitemap.xml dist/
 	@echo "Production files created in dist/ folder"
