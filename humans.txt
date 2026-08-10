@@ -1,0 +1,15 @@
+/* TEAM */
+
+    Leonardo Faoro
+    Role: Engineer. Hacker. Thinkerer.
+    Site: leonardofaoro.com
+
+/* THANKS */
+
+    Marvin Minsky, for the creed.
+    The open-source community.
+
+/* SITE */
+
+    Standard: HTML5, Tailwind CSS, vanilla JavaScript.
+    Built by a human, not a bot.

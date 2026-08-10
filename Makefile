@@ -23,7 +23,9 @@ deploy: build
 	@cp manifest.json dist/
 	@cp security.txt dist/
 	@cp robots.txt dist/
+	@cp _redirects dist/_redirects
 	@cp llms.txt dist/llms.txt
+	@cp humans.txt dist/humans.txt
 	@cp LICENSE dist/LICENSE
 	@cp LICENSE-CONTENT.md dist/LICENSE-CONTENT.md
 	@sed -i "s|<lastmod>.*</lastmod>|<lastmod>$$(date +%Y-%m-%d)</lastmod>|" sitemap.xml
