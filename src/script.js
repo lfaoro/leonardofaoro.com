@@ -95,6 +95,11 @@
       var text = btn.getAttribute('data-copy');
       if (!text) return;
       navigator.clipboard.writeText(text).then(function () {
+        btn.classList.add('copy-btn-success');
+        clearTimeout(btn._copyT);
+        btn._copyT = setTimeout(function () {
+          btn.classList.remove('copy-btn-success');
+        }, 700);
         showToast('Copied to clipboard');
       }).catch(function () {
         showToast('Copy failed');

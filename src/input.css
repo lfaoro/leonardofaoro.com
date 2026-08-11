@@ -121,6 +121,12 @@
   @apply ring-2 ring-amber-500 ring-offset-1 ring-offset-neutral-50 dark:ring-offset-neutral-950;
 }
 
+.copy-btn.copy-btn-success,
+.copy-btn.copy-btn-success:hover,
+.dark .copy-btn.copy-btn-success:hover {
+  @apply text-amber-500;
+}
+
 .nav-active {
   @apply relative text-neutral-900 dark:text-neutral-100;
 }
